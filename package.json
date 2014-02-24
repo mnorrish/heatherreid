@@ -1,0 +1,14 @@
+{
+  "name": "heatherreid",
+  "version": "0.1.0",
+  "description": "Website for Heather Reid",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mnorrish/heatherreid.git"
+  },
+  "author": "matt@mnorrish.co.nz",
+  "bugs": {
+    "url": "https://github.com/mnorrish/heatherreid/issues"
+  }
+}
