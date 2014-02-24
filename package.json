@@ -10,5 +10,8 @@
   "author": "matt@mnorrish.co.nz",
   "bugs": {
     "url": "https://github.com/mnorrish/heatherreid/issues"
+  },
+  "devDependencies": {
+    "node-sass": "~0.8.1"
   }
 }
