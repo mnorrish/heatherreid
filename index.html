@@ -117,11 +117,11 @@
           },
           email: function(value) {
             if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value)) {
-              $('#cEmail').next('.error').addClass('hidden');
+              $('#cEmail').siblings('.error').addClass('hidden');
               return true;
             }
 
-            $('#cEmail').next('.error').removeClass('hidden');
+            $('#cEmail').siblings('.error').removeClass('hidden');
             return false
           },
           message: function(value) {
