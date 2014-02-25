@@ -86,7 +86,7 @@
             <label for="cEmail" class="desc">Email</label>
             <input id="cEmail" name="email" type="email" placeholder="Email" required>
             <label for="cEmail" class="required">Required</label>
-            <label for="cEmail" class="error">Email address must be valid</label>
+            <label for="cEmail" class="error hidden">Email address must be valid</label>
           </div>
           <div>
             <label for="cMessage" class="desc">Message</label>
@@ -107,11 +107,34 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
       $(function(){
-        var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        var emailPattern = ;
+
+        var validityTests = {
+          name: function(value) {
+            return true;
+          },
+          phone: function(value) {
+            return true;
+          },
+          email: function(value) {
+            if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value)) {
+              $('#cEmail').next('.error').addClass('hidden');
+              return true;
+            }
+            
+            $('#cEmail').next('.error').removeClass('hidden');
+            return false
+          },
+          message: function(value) {
+            return true;
+          }
+        };
 
         var isValidFormData  = function(data) {
           var isValid = true;
-          isValid = isValid && emailPattern.test(data[2].value);
+          $.each(data, function(index, item) {
+            isValid = isValid && validityTests[item.name](item.value);
+          });
 
           return isValid;
         };
