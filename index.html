@@ -107,7 +107,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
       $(function(){
-        var emailPattern = ;
 
         var validityTests = {
           name: function(value) {
@@ -121,7 +120,7 @@
               $('#cEmail').next('.error').addClass('hidden');
               return true;
             }
-            
+
             $('#cEmail').next('.error').removeClass('hidden');
             return false
           },
@@ -146,6 +145,7 @@
           console.log(formData);
           console.log(isValidFormData(formData));
         });
+        
       });
     </script>
 
