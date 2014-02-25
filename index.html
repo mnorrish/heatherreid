@@ -145,6 +145,8 @@
           console.log(formData);
 
           if (isValidFormData(formData)) {
+            $('input, textarea, button', '#contactForm').prop('disabled', true);
+
             $.ajax({
               url: '/test',
               type: 'POST',
@@ -154,6 +156,9 @@
               },
               error: function() {
                 console.log('error');
+              },
+              complete: function() {
+                $('input, textarea, button', '#contactForm').prop('disabled', false);
               }
             });
           }
