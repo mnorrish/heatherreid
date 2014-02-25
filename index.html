@@ -111,7 +111,7 @@
 
         var isValidFormData  = function(data) {
           var isValid = true;
-          isValid = isValid && data[2].value.test(emailPattern);
+          isValid = isValid && emailPattern.test(data[2].value);
 
           return isValid;
         };
