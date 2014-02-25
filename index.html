@@ -144,8 +144,7 @@
           var formData = $(this).serializeArray();
           console.log(formData);
 
-          if (isValidFormData(formData))) {
-
+          if (isValidFormData(formData)) {
             $.ajax({
               url: '/test',
               type: 'POST',
@@ -158,6 +157,7 @@
               }
             });
           }
+
         });
 
       });
