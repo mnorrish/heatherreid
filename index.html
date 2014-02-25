@@ -70,12 +70,51 @@
         </dl>
       </div>
 
+      <div>
+        <form id="contactForm">
+          <div>
+            <label for="cName" class="desc">Name</label>
+            <input id="cName" name="name" type="text" placeholder="Name" required>
+            <label for="cName" class="required">Required</label>
+          </div>
+          <div>
+            <label for="cPhone" class="desc">Phone</label>
+            <input id="cPhone" name="phone" type="text" placeholder="Phone" required>
+            <label for="cPhone" class="required">Required</label>
+          </div>
+          <div>
+            <label for="cEmail" class="desc">Email</label>
+            <input id="cEmail" name="email" type="email" placeholder="Email" required>
+            <label for="cEmail" class="required">Required</label>
+            <label for="cEmail" class="error">Email address must be valid</label>
+          </div>
+          <div>
+            <label for="cMessage" class="desc">Message</label>
+            <textarea id="cMessage" name="message" placeholder="Message" rows="3" required></textarea>
+            <label for="cMessage" class="required">Required</label>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
     </section>
 
     <footer>
       <small rel="copyright">All rights reserved Heather Reid 2013</small>
       <small><a href="http://mnorrish.co.nz" title="M.Norrish | Designer & Developer">Website by M.Norrish</a></small>
     </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('#contactForm').on('submit', function(e) {
+          e.preventDefault();
+
+          var formData = $(this).serializeArray();
+          console.log(formData);
+        });
+      });
+    </script>
 
   </body>
 </html>
