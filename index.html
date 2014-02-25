@@ -143,9 +143,23 @@
 
           var formData = $(this).serializeArray();
           console.log(formData);
-          console.log(isValidFormData(formData));
+
+          if (isValidFormData(formData))) {
+
+            $.ajax({
+              url: '/test',
+              type: 'POST',
+              data: formData,
+              success: function() {
+                console.log('success');
+              },
+              error: function() {
+                console.log('error');
+              }
+            });
+          }
         });
-        
+
       });
     </script>
 
