@@ -69,104 +69,12 @@
           <dd class="phone">03 472 8881 or 027 481 1151</dd>
         </dl>
       </div>
-
-      <div>
-        <form id="contactForm">
-          <div>
-            <label for="cName" class="desc">Name</label>
-            <input id="cName" name="name" type="text" placeholder="Name" required>
-            <label for="cName" class="required">Required</label>
-          </div>
-          <div>
-            <label for="cPhone" class="desc">Phone</label>
-            <input id="cPhone" name="phone" type="text" placeholder="Phone" required>
-            <label for="cPhone" class="required">Required</label>
-          </div>
-          <div>
-            <label for="cEmail" class="desc">Email</label>
-            <input id="cEmail" name="email" type="email" placeholder="Email" required>
-            <label for="cEmail" class="required">Required</label>
-            <label for="cEmail" class="error hidden">Email address must be valid</label>
-          </div>
-          <div>
-            <label for="cMessage" class="desc">Message</label>
-            <textarea id="cMessage" name="message" placeholder="Message" rows="3" required></textarea>
-            <label for="cMessage" class="required">Required</label>
-          </div>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-
     </section>
 
     <footer>
       <small rel="copyright">All rights reserved Heather Reid 2013</small>
       <small><a href="http://mnorrish.co.nz" title="M.Norrish | Designer & Developer">Website by M.Norrish</a></small>
     </footer>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-      $(function(){
-
-        var validityTests = {
-          name: function(value) {
-            return true;
-          },
-          phone: function(value) {
-            return true;
-          },
-          email: function(value) {
-            if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value)) {
-              $('#cEmail').siblings('.error').addClass('hidden');
-              return true;
-            }
-
-            $('#cEmail').siblings('.error').removeClass('hidden');
-            return false
-          },
-          message: function(value) {
-            return true;
-          }
-        };
-
-        var isValidFormData  = function(data) {
-          var isValid = true;
-          $.each(data, function(index, item) {
-            isValid = isValid && validityTests[item.name](item.value);
-          });
-
-          return isValid;
-        };
-
-        $('#contactForm').on('submit', function(e) {
-          e.preventDefault();
-
-          var formData = $(this).serializeArray();
-          console.log(formData);
-
-          if (isValidFormData(formData)) {
-            $('input, textarea, button', '#contactForm').prop('disabled', true);
-
-            $.ajax({
-              url: '/test',
-              type: 'POST',
-              data: formData,
-              success: function() {
-                console.log('success');
-              },
-              error: function() {
-                console.log('error');
-              },
-              complete: function() {
-                $('input, textarea, button', '#contactForm').prop('disabled', false);
-              }
-            });
-          }
-
-        });
-
-      });
-    </script>
 
   </body>
 </html>
