@@ -33,6 +33,11 @@ $(function(){
     return isValid;
   };
 
+  var showThanks = function() {
+    $('#contactForm').remove();
+    $('#thanks').removeClass('hidden');
+  };
+
   $('#contactForm').on('submit', function(e) {
     e.preventDefault();
 
@@ -46,16 +51,12 @@ $(function(){
         url: '/test',
         type: 'POST',
         data: formData,
-        success: function() {
-          console.log('success');
-        },
+        success: showThanks,
         error: function() {
           console.log('error');
         },
         complete: function() {
           $('input, textarea, button', '#contactForm').prop('disabled', false);
-          $('#contactForm').remove();
-          $('#thanks').removeClass('hidden');
         }
       });
     }
