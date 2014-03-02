@@ -99,12 +99,12 @@
 
         var validityTests = {
           name: function(value) {
-            var isValid = value.length > 1;
+            var isValid = value.length > 0;
             $('#cName').siblings('.error').toggleClass('hidden', isValid);
             return isValid;
           },
           phone: function(value) {
-            var isValid = value.length > 1;
+            var isValid = value.length > 0;
             $('#cPhone').siblings('.error').toggleClass('hidden', isValid);
             return isValid;
 
@@ -115,7 +115,7 @@
             return isValid;
           },
           message: function(value) {
-            var isValid = value.length > 1;
+            var isValid = value.length > 0;
             $('#cMessage').siblings('.error').toggleClass('hidden', isValid);
             return isValid;
           }
