@@ -54,6 +54,8 @@ $(function(){
         },
         complete: function() {
           $('input, textarea, button', '#contactForm').prop('disabled', false);
+          $('#contactForm').remove();
+          $('#thanks').removeClass('hidden');
         }
       });
     }
