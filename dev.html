@@ -62,11 +62,13 @@
             <label for="cName" class="desc">Name</label>
             <input id="cName" name="name" type="text" placeholder="Name" required>
             <label for="cName" class="required">Required</label>
+            <label for="cName" class="error hidden">Name must be entered</label>
           </div>
           <div>
             <label for="cPhone" class="desc">Phone</label>
             <input id="cPhone" name="phone" type="text" placeholder="Phone" required>
             <label for="cPhone" class="required">Required</label>
+            <label for="cPhone" class="error hidden">Phone number must be entered</label>
           </div>
           <div>
             <label for="cEmail" class="desc">Email</label>
@@ -78,6 +80,7 @@
             <label for="cMessage" class="desc">Message</label>
             <textarea id="cMessage" name="message" placeholder="Message" rows="3" required></textarea>
             <label for="cMessage" class="required">Required</label>
+            <label for="cMessage" class="error hidden">Message must be entered</label>
           </div>
           <button type="submit">Send</button>
         </form>
@@ -96,22 +99,25 @@
 
         var validityTests = {
           name: function(value) {
-            return true;
+            var isValid = value.length > 1;
+            $('#cName').siblings('.error').toggleClass('hidden', isValid);
+            return isValid;
           },
           phone: function(value) {
-            return true;
+            var isValid = value.length > 1;
+            $('#cPhone').siblings('.error').toggleClass('hidden', isValid);
+            return isValid;
+
           },
           email: function(value) {
-            if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value)) {
-              $('#cEmail').siblings('.error').addClass('hidden');
-              return true;
-            }
-
-            $('#cEmail').siblings('.error').removeClass('hidden');
-            return false
+            var isValid = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value);
+            $('#cEmail').siblings('.error').toggleClass('hidden', isValid);
+            return isValid;
           },
           message: function(value) {
-            return true;
+            var isValid = value.length > 1;
+            $('#cMessage').siblings('.error').toggleClass('hidden', isValid);
+            return isValid;
           }
         };
 
