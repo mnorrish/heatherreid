@@ -199,18 +199,19 @@ header {
     margin: 0 0 8px 0;
   }
 
-  &>div {
+  & > .contact-details {
+    width: calc(50% - 10px);
     float: left;
   }
 
-  &>div:first-child {
-    width: 335px;
-    padding-right: 20px;
+  & > .facebook {
+    width: calc(50% - 10px);
+    margin-left: calc(50% + 20px);
   }
 
   dt {
-      @extend .visuallyhidden;
-    }
+    @extend .visuallyhidden;
+  }
 
   dd {
     margin: 0;
@@ -362,11 +363,12 @@ footer {
   }
 
   #mainText,
-  #contact>div,
-  #contact>form {
+  #contact .contact-details,
+  #contact .facebook {
     float: none;
     width: auto;
     height: auto;
+    margin-left: auto;
   }
 
   #heather {
@@ -503,19 +505,6 @@ footer {
         margin: 15px 0 -15px 0;
         display: block;
         width: auto;
-      }
-    }
-
-    form {
-      input,
-      textarea {
-        width: 281px;
-      }
-
-      button {
-        float: none;
-        width: 100%;
-        padding: 0;
       }
     }
   }

@@ -28,6 +28,17 @@
 
   <body>
 
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7&appId=811333075635782';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <header>
       <h1 id="logo" class="ir">Heather Reid | Marriage Celebrant</h1>
       <blockquote id="introLine">Working with <br>you to create <br>your unique <br>ceremony</blockquote>
@@ -57,7 +68,7 @@
     </section>
 
     <section id="contact" class="clearfix">
-      <div>
+      <div class="contact-details">
         <h2>Contact me</h2>
         <p>All questions and enquiries welcome</p>
         <dl>
@@ -68,6 +79,13 @@
           <dt>Phone</dt>
           <dd class="phone">03 472 8881 or 027 481 1151</dd>
         </dl>
+      </div>
+
+      <div class="facebook">
+        <h2>Facebook</h2>
+        <div>
+          <div class="fb-page" data-href="https://www.facebook.com/heatherreidcelebrant/" data-width="370" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/heatherreidcelebrant/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/heatherreidcelebrant/">Heather Reid Marriage Celebrant</a></blockquote></div>
+        </div>
       </div>
 
     </section>
