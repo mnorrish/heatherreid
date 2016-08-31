@@ -13,55 +13,55 @@
 h1,
 h2,
 h3 {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 a {
-	color: inherit;
-	text-decoration: underline;
-	
-	&:hover {
-	  color: #AAA;
-	}
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    color: #AAA;
+  }
 }
 
 
 html {
-	background-image: url('../img/bg.jpg');
-	background-repeat: repeat;
+  background-image: url('../img/bg.jpg');
+  background-repeat: repeat;
 }
 
 body {
-	width: 900px;
-	margin: 0 auto;
-	padding: 86px 30px;
-	color: #E6E6E6;
-	font-family: 'Colaborate', Verdana, Arial, sans-serif;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 1.6em;
+  width: 900px;
+  margin: 0 auto;
+  padding: 86px 30px;
+  color: #E6E6E6;
+  font-family: 'Colaborate', Verdana, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6em;
 }
 
 header,
 body>section {
-	padding: 0 55px;
+  padding: 0 55px;
 }
 
 header,
 #contact {
-	background-color: #A0002A;
+  background-color: #A0002A;
 }
 
 header {
-	padding-top: 35px;
-	padding-bottom: 85px;
-	position: relative;
-	height: 330px;
-	background-image: url('../img/header.png');
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	
-	h1 {
+  padding-top: 35px;
+  padding-bottom: 85px;
+  position: relative;
+  height: 330px;
+  background-image: url('../img/header.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  h1 {
     background-image: url('../img/banner.png');
     background-position: center top;
     background-repeat: no-repeat;
@@ -71,67 +71,67 @@ header {
     left: -1px;
     top: 35px;
   }
-  
+
   blockquote {
-  	@include nixieOne;
-  	position: absolute;
-  	font-size: 45px;
-  	line-height: 51px;
-  	text-align: center;
-  	width: 434px;
-  	top: 160px;
-  	left: 410px;
-  	margin: 0;
+    @include nixieOne;
+    position: absolute;
+    font-size: 45px;
+    line-height: 51px;
+    text-align: center;
+    width: 434px;
+    top: 160px;
+    left: 410px;
+    margin: 0;
   }
 }
 
 #profile {
-	background-color: #343434;
-	background-image: url('../img/profile.png');
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	padding-top: 25px;
-	padding-bottom: 70px;
-	
-	h2 {
-  	@include nixieOne;
-  	font-size: 30px;
-  	line-height: 36px;
-  	text-align: center;
-  	padding: 6px 0;
-  	border-top: 1px solid #E6E6E6;
-  	border-bottom: 1px solid #E6E6E6;
-  	margin: 5px 0 35px 0;
+  background-color: #343434;
+  background-image: url('../img/profile.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-top: 25px;
+  padding-bottom: 70px;
+
+  h2 {
+    @include nixieOne;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    padding: 6px 0;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    margin: 5px 0 35px 0;
   }
 }
 
 #heather {
   float: left;
-	width: 242px;
-	height: 470px;
-	padding: 0 57px;
-	text-align: center;
-	background-image: url('../img/heather.png');
-	background-position: left top;
-	background-repeat: no-repeat;
-	
-	img {
-	 display: block;
+  width: 242px;
+  height: 470px;
+  padding: 0 57px;
+  text-align: center;
+  background-image: url('../img/heather.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+
+  img {
+   display: block;
   }
-  
+
   h3 {
     @include nixieOne;
     font-size: 30px;
     line-height: 36px;
     margin: 0 0 12px 0;
   }
-  
+
   p {
     margin: 0 0 12px 0;
     font-size: 14px;
     line-height: 18px;
   }
-  
+
   .canz {
     display: block;
     text-align: left;
@@ -145,11 +145,11 @@ header {
 
 #mainText {
   float: left;
-	width: 434px;
-  
+  width: 434px;
+
   p {
     margin: 0 0 8px 0;
-    
+
     &:first-child {
       font-size: 32px;
       line-height: 36px;
@@ -160,17 +160,17 @@ header {
 #profile blockquote {
   margin: 0;
   padding-top: 15px;
-	clear: both;
-	@include nixieOne;
-	
-	p {
-	  font-size: 40px;
-	  line-height: 1.3em;
-	  margin: 0;
-	  
-	  &:first-child {
-	    margin-left: 32px;
-	    width: 390px;
+  clear: both;
+  @include nixieOne;
+
+  p {
+    font-size: 40px;
+    line-height: 1.3em;
+    margin: 0;
+
+    &:first-child {
+      margin-left: 32px;
+      width: 390px;
       span {
         white-space: nowrap;
         text-align: right;
@@ -182,19 +182,19 @@ header {
         }
       }
     }
-	}
+  }
 }
 
 #contact {
-	padding-top: 45px;
-  
+  padding-top: 45px;
+
   h2 {
-  	@include nixieOne;
-  	font-size: 48px;
-  	line-height: 1em;
-  	margin: 0;
+    @include nixieOne;
+    font-size: 48px;
+    line-height: 1em;
+    margin: 0;
   }
-  
+
   p {
     margin: 0 0 8px 0;
   }
@@ -207,16 +207,16 @@ header {
     width: 335px;
     padding-right: 20px;
   }
-  
+
   dt {
       @extend .visuallyhidden;
     }
-    
+
   dd {
     margin: 0;
     font-size: 21px;
     line-height: 45px;
-    
+
     &:before {
       font-family: 'ModernPictograms';
       font-size: 45px;
@@ -225,16 +225,16 @@ header {
       display: inline-block;
       text-align: center;
     }
-    
+
     &.location:before {
       content: ',';
     }
-    
+
     &.email:before {
       content: 'm';
       font-size: 37px;
     }
-    
+
     &.phone:before {
       content: 'O';
     }
@@ -243,36 +243,36 @@ header {
   form {
     margin-top: 10px;
     width: 434px;
-    
+
     div {
       margin-bottom: 18px;
       padding: 0 1px;
       position: relative;
     }
-    
+
     label,
     input {
       display: block;
     }
-    
+
     label {
       &.desc {
         @extend .visuallyhidden;
       }
-      
+
       &.required {
         position: absolute;
         top: 1px;
         right: 2%;
         font-size: 14px;
       }
-      
+
       &.error {
         font-size: 14px;
       }
-      
+
     }
-    
+
     input,
     button,
     textarea {
@@ -285,12 +285,12 @@ header {
       border-radius: 3px;
       width: 415px;
       padding: 0 8px;
-      
+
       &:focus {
         outline: none;
       }
     }
-    
+
     button {
       display: block;
       float: right;
@@ -298,11 +298,11 @@ header {
       padding: 0 15px;
       background-color: #E6E6E6;
       color: #A0002A;
-      
+
       &[disabled] {
         color: #999;
       }
-      
+
       &:after {
         font-family: 'ModernPictograms';
         font-size: 1.5em;
@@ -317,14 +317,14 @@ header {
 }
 
 footer {
-	color: #B7B7B7;
-	font-size: 16px;
-	padding: 60px 55px 0 55px;
-	background-image: url('../img/footer.png');
-	background-position: right top;
-	background-repeat: no-repeat;
-	height: 45px;
-  
+  color: #B7B7B7;
+  font-size: 16px;
+  padding: 60px 55px 0 55px;
+  background-image: url('../img/footer.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  height: 45px;
+
   small {
     display: block;
     float: left;
@@ -343,15 +343,15 @@ footer {
     min-width: 320px;
     padding: 50px 0;
   }
-  
+
   header {
     height: auto;
-    
+
     h1 {
       background-image: url('../img/banner642.png');
       width: 642px;
     }
-    
+
     blockquote {
       position: static;
       top: 0;
@@ -360,7 +360,7 @@ footer {
       margin-top: 360px;
     }
   }
-  
+
   #mainText,
   #contact>div,
   #contact>form {
@@ -368,12 +368,12 @@ footer {
     width: auto;
     height: auto;
   }
-  
+
   #heather {
     float: none;
     margin: 0 auto;
   }
-  
+
   #profile blockquote {
     p {
       &:first-child {
@@ -381,7 +381,7 @@ footer {
         margin-left: 60px;
         margin-right: 60px;
       }
-      
+
       &+p {
         margin-top: 10px;
         font-size: 20px;
@@ -389,23 +389,23 @@ footer {
       }
     }
   }
-  
+
   #contact {
     &>div:first-child {
       width: auto;
       padding: 0;
     }
-    
+
     form {
       width: auto;
-      
+
       input,
       textarea {
         width: 511px;
       }
     }
   }
-  
+
   footer {
     padding-top: 80px;
   }
@@ -415,64 +415,64 @@ footer {
   html {
     background-image: none;
   }
-  
+
   body {
     width: auto;
     padding: 0;
   }
-  
+
   header {
     padding-left: 0;
     padding-right: 0;
-    
+
     blockquote {
       font-size: 40px;
       line-height: 45px;
     }
   }
-  
+
   body>section,
   footer {
     padding-left: 0;
     padding-right: 0;
-    
+
     &>* {
       max-width: 300px;
       margin-left: auto;
       margin-right: auto;
     }
   }
-  
+
   header {
     h1 {
       width: 100%;
     }
   }
-  
+
   #profile {
-    
+
     h2 {
       margin: 0 auto 20px auto;
     }
-    
+
     #heather {
       padding: 0 29px;
       background-position: top center;
-      
+
       img {
         margin: 0 auto;
       }
     }
-    
+
     blockquote {
       p {
         &:first-child {
           margin-left: 10%;
           margin-right: 10%;
-          
+
           span {
             font-size: 30px;
-            
+
             &:first-child {
               font-size: 27px;
             }
@@ -480,10 +480,10 @@ footer {
         }
       }
     }
-    
+
     blockquote {
       margin: 0 auto;
-      
+
       p {
         &:first-child {
           margin: 0;
@@ -491,27 +491,27 @@ footer {
       }
     }
   }
-  
-  
+
+
   #contact {
     text-align: center;
-    
+
     dd {
       font-size: 18px;
-      
+
       &:before {
         margin: 15px 0 -15px 0;
         display: block;
         width: auto;
       }
     }
-    
+
     form {
       input,
       textarea {
         width: 281px;
       }
-      
+
       button {
         float: none;
         width: 100%;
@@ -519,13 +519,13 @@ footer {
       }
     }
   }
-  
+
   footer {
     background-image: none;
     background-color: #A0002A;
     height: auto;
     padding: 30px 0;
-    
+
     small {
       float: none;
       margin: 0 auto;
@@ -537,9 +537,9 @@ footer {
 @media only screen and (max-width: 460px) {
   #logo {
     background-size: 500px auto;
-    height: 280px; 
+    height: 280px;
   }
-  
+
   header blockquote {
     margin-top: 300px;
   }
