@@ -207,6 +207,10 @@ header {
   & > .facebook {
     width: calc(50% - 10px);
     margin-left: calc(50% + 20px);
+
+    h2 {
+      margin-bottom: 8px;
+    }
   }
 
   dt {
