@@ -12,7 +12,7 @@
     "url": "https://github.com/mnorrish/heatherreid/issues"
   },
   "devDependencies": {
-    "node-sass": "3.8.0"
+    "node-sass": "8.0.0"
   },
   "scripts": {
     "build": "node-sass --output-style=compressed styles/main.scss styles/main.css"
